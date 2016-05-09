@@ -1,0 +1,17 @@
+
+<div class="thumbnail-profile">
+	<img  class="profile" src="http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts">
+	<br>
+</div>
+
+<h1>User name: <%= @user.username %> </h1> 
+<br>
+<h1>First name: <%= @user.fname %> </h1> 
+<h1>Last Name: <%= @user.lname %> </h1> 
+<br>
+<h1>E-mail: <%= @user.email %> </h1> 
+
+<% if @user.id == session[:user_id] %>
+	<%= link_to "Edit", edit_user_path%> | <%= link_to "Delete user", destroy_path, method: :delete %>
+<% end %>
+

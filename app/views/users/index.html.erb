@@ -1,0 +1,8 @@
+<h1 class="welcome">Welcome !</h1>
+<% @user.reverse.each do |user| %>
+	<div class="thumbnail">
+		<img class="users-img" src="http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts">
+		<%= link_to user.username, user %>
+	<br>
+	</div>
+<% end %>

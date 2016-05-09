@@ -1,0 +1,64 @@
+<% if session[:user_id] %>
+	<div class="post-form">
+		<%= form_for @post do |f| %>
+			<%= f.text_field :body %>
+			<%= f.hidden_field :user_id, value: session[:user_id] %>
+			<%= f.submit %>
+			<br>
+		<%= @posts.length %> posts
+		<% end %>	
+	</div>
+<% end %>
+	<% @posts.reverse.each do |post| %>
+	<div class="posts">
+		<div class="comment-name">
+			<h2>
+				<% if post.user %>
+					<% by = post.user.username %>
+				<% else %>
+					<% by = "NO USER ASSIGNED" %>
+				<% end %>
+
+				<%= by %>: 
+				<% if session[:user_id] %>
+					<span class= "x-out"><%= link_to "X", post_path(post), method: :delete %></span>
+				<% end %>
+			</div>
+				<br>
+				<div class="thumbnail-post">
+					<img  class="profile-post" src="http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts">
+					<br>
+				</div>
+				"<%= post.body%>"
+				<br>
+				<br>
+			</h2>
+		<% comments = post.comments %>
+		<%comments.each do |comment| %>
+		<div class="comments-posts">
+			<h4>	
+				<% if comment.user %>
+					<% b = comment.user.username %>
+				<% else %>
+					<% by = "NO USER ASSIGNED" %>
+				<% end %> 
+				<%= b %>:
+				<br>
+					<%= comment.body %>
+				<br>
+		</div>
+			<% end %>
+			</h4>
+			<% if session[:user_id] %>
+				<b>Leave a comment:</b>
+				<br>
+				<%= form_for Comment.new do |f| %>
+					<%= f.hidden_field :post_id,  value: post.id%>
+					<%= f.hidden_field :user_id, value: session[:user_id] %>
+					<%= f.text_field :body %>
+					
+					<%= f.submit %>
+				<% end %>	
+			<% end %>
+</div>
+	<% end %>

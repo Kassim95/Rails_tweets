@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+nav{
+	color: white;
+	background: black;
+}
+
+.nav-links a{
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	padding-left: 250px;
+}
+.nav-links a:hover { 
+    color:red;
+}
+.log-out{
+	float:  right;
+}
+
+.log-form{
+	border: solid;
+	width: 300px;
+	height: 330px;
+	margin-left: 450px;
+	margin-top: 110px;
+
+}
+
+.log-form form{
+	padding-top: 20px;
+	padding-left: 90px;
+	padding-top: 20px;
+}
+
+.logo-all{
+	border-bottom: solid;
+	background: black;
+}
+.logo{
+	color:red;
+}
+
+.logo2{
+	color:white;
+}
+
+.thumbnail{
+	width: 400px;
+	height: 430px;
+	border: solid;
+	margin-left: 425px;
+	margin-top: 20px;
+}
+.thumbnail a{
+	padding-left: 140px;
+	font-size: 30px;
+	color: black;
+
+}
+.users-img{
+	height: 370px;
+	width: 380px;
+	float: left
+}
+
+.post-form{
+	border: solid;
+	margin-top: 20px;
+	height: 100px;
+}
+
+.post-form a{
+
+}
+.posts{
+	border: solid;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.comment-name ,.comment-name a{
+	color:red;
+	background: black;
+	font-size: 20px;
+	text-decoration: none;
+
+}
+
+.comments-posts{
+	color: grey;
+}
+
+.welcome{
+	text-align: center;
+}
+
+.logo, .logo2{
+	font-size: 40px;
+}
+
+.x-out{
+	float:right;
+}
+
+.thumbnail-profile{
+	width: 400px;
+	height: 430px;
+	border: solid;
+	margin-left: 5px;
+	margin-right: 100px;
+	margin-top: 20px;
+	float: left;
+}
+.profile{
+	height: 370px;
+	width: 380px;
+}
+
+.thumbnail-post{
+	width: 60px;
+	height: 60px;
+	border: solid;
+	margin-left: 5px;
+	margin-right: 50px;
+	float: left;
+}
+.profile-post{
+	height: 60px;
+	width: 60px;
+}
+

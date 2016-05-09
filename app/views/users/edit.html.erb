@@ -1,0 +1,29 @@
+
+
+<div class="thumbnail-profile">
+	<img  class="profile" src="http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts">
+	<br>
+</div>
+<h1>
+	<%= form_for @user do |f| %>
+		<%= f.label :username %>
+		<br>
+		<%= f.text_field :username %>
+		<br>
+		<%= f.label :fname %>
+		<br>
+		<%= f.text_field :fname %>
+		<br>
+		<%= f.label :lname %>
+		<br>
+		<%= f.text_field :lname %>
+		<br>
+		<%= f.label :email %>
+		<br>
+		<%= f.text_field :email %>
+		<br>
+		<%= f.label :password %>
+		<br>
+		<%= f.submit :Save %>
+	<% end %>	
+</h1>

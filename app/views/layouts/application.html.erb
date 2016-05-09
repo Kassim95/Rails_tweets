@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails2App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+	<span class="nav-links">
+		<h2><span class="logo">Ruby</span><span class="logo2">Tweets</span></h2>
+		<%= link_to "Posts", posts_path %> <%= link_to "Users", users_path %> <span class="log-out"> <%= link_to "Log out", logout_path, method: :delete %></span>
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>

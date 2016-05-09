@@ -1,0 +1,17 @@
+
+<div class="log-form">
+	<h1 class="logo-all"><span class="logo">Ruby</span><span class="logo2"> Tweets</span></h1>
+	<%= form_for(:user, :url => sessions_path) do |f| %>
+		<%= f.label :username %>
+		<br>
+		<%= f.text_field :username %>
+		<br>
+		<%= f.label :password %>
+		<br>
+		<%= f.text_field :password %>
+		<br>
+		<%= f.submit :Login %>
+		<br>
+		<%= link_to "Signup", new_user_path %>
+	<% end %>
+</div>

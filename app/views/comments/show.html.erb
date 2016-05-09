@@ -1,0 +1,10 @@
+<b>Leave a comment:</b>
+<br>
+<%= form_for Comment.new do |f| %>
+	<%= f.text_field :body %>
+	<%= f.submit %>
+<% end %>	
+<% @comments.each do |comment| %>
+	<%= session[:username] %>
+	<br>
+<% end %>
